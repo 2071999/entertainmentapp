@@ -84,17 +84,9 @@ const Topbar = () => {
                   {item.display}
                 </Button>
               ))}
-              <IconButton
-                sx={{ color: "inherit" }}
-                onClick={onSwithTheme}
-              >
-                {themeMode === themeModes.dark && <DarkModeOutlinedIcon />}
-                {themeMode === themeModes.light && <WbSunnyOutlinedIcon />}
-              </IconButton>
+           
             </Box>
-            {/* main menu */}
-
-            {/* user menu */}
+            
             <Stack spacing={3} direction="row" alignItems="center">
               {!user && <Button
                 variant="contained"

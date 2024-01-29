@@ -74,25 +74,13 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
       <Swiper
         grabCursor={true}
         loop={true}
-        // modules={[Autoplay]}
+       
         style={{ width: "100%", height: "max-content" }}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false
-      // }}
+     
       >
         {movies.map((movie, index) => (
           <SwiperSlide key={index}>
             <Box sx={{
-              paddingTop: {
-                xs: "130%",
-                sm: "80%",
-                md: "60%",
-                lg: "45%"
-              },
-              backgroundPosition: "top",
-              backgroundSize: "cover",
-              backgroundImage: `url(${tmdbConfigs.backdropPath(movie.backdrop_path || movie.poster_path)})`
             }} />
             <Box sx={{
               width: "100%",
@@ -119,7 +107,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                 width: { sm: "unset", md: "30%", lg: "40%" }
               }}>
                 <Stack spacing={4} direction="column">
-                  {/* title */}
+                
                   <Typography
                     variant="h4"
                     fontSize={{ xs: "2rem", md: "2rem", lg: "4rem" }}
@@ -129,16 +117,9 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                     }}
                   >
                     {movie.title || movie.name}
-                  </Typography>
-                  {/* title */}
-
+                  </Typography>             
                   <Stack direction="row" spacing={1} alignItems="center">
-                    {/* rating */}
-                    <CircularRate value={movie.vote_average} />
-                    {/* rating */}
-
-                    <Divider orientation="vertical" />
-                    {/* genres */}
+                    <Divider orientation="vertical" />                
                     {[...movie.genre_ids].splice(0, 2).map((genreId, index) => (
                       <Chip
                         variant="filled"
@@ -146,30 +127,13 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                         key={index}
                         label={genres.find(e => e.id === genreId) && genres.find(e => e.id === genreId).name}
                       />
-                    ))}
-                    {/* genres */}
+                    ))}                 
                   </Stack>
-
-                  {/* overview */}
                   <Typography variant="body1" sx={{
                     ...uiConfigs.style.typoLines(3)
                   }}>
                     {movie.overview}
                   </Typography>
-                  {/* overview */}
-
-                  {/* buttons */}
-                  <Button
-                    variant="contained"
-                    size="large"
-                    startIcon={<PlayArrowIcon />}
-                    component={Link}
-                    to={routesGen.mediaDetail(mediaType, movie.id)}
-                    sx={{ width: "max-content" }}
-                  >
-                    watch now
-                  </Button>
-                  {/* buttons */}
                 </Stack>
               </Box>
             </Box>

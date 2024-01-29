@@ -65,21 +65,6 @@ const MediaItem = ({ media, mediaType }) => {
               left: 0,
               backgroundImage: "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))"
             }} />
-            <Button
-              className="media-play-btn"
-              variant="contained"
-              startIcon={<PlayArrowIcon />}
-              sx={{
-                display: { xs: "none", md: "flex" },
-                opacity: 0,
-                transition: "all 0.3s ease",
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                "& .MuiButton-startIcon": { marginRight: "-4px" }
-              }}
-            />
             <Box
               className="media-info"
               sx={{
@@ -94,7 +79,7 @@ const MediaItem = ({ media, mediaType }) => {
               }}
             >
               <Stack spacing={{ xs: 1, md: 2 }}>
-                {rate && <CircularRate value={rate} />}
+               
 
                 <Typography>{releaseDate}</Typography>
 
@@ -112,7 +97,7 @@ const MediaItem = ({ media, mediaType }) => {
             </Box>
           </>
         )}
-        {/* movie or tv item */}
+       
 
         {/* people */}
         {mediaType === "people" && (
@@ -129,7 +114,7 @@ const MediaItem = ({ media, mediaType }) => {
             </Typography>
           </Box>
         )}
-        {/* people */}
+       
       </Box>
     </Link>
   );

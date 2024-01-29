@@ -4,9 +4,9 @@ const Logo = () => {
   const theme = useTheme();
 
   return (
-    <Typography fontWeight="700" fontSize="1.7rem">
-    Alma<span style={{ color: theme.palette.primary.main }}>
-     <span style={{ borderBottom: '2px solid red' }}>Better</span>
+    <Typography fontWeight="500" fontSize="1.7rem">
+    Movie<span style={{ color: theme.palette.primary.main }}>
+     <span style={{}}>App</span>
    </span>
  </Typography>
   );

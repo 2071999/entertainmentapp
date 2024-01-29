@@ -29,10 +29,10 @@ const App = () => {
         pauseOnHover
         theme={themeMode}
       />
-      {/* mui reset css */}
+      
       <CssBaseline />
 
-      {/* app routes */}
+      
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
